@@ -1,77 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06fb1f6c-9d3e-43a0-88ab-aaea0fc23dfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Adres.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Album.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Atriest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Liedje.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Muzikant.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/entity/TOONHOOGTES.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Zanger.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/group21.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group21.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="TypeScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\Program Files\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="205eWy1jMtG6qaqlut3RCEu9pkw" />
+  <component name="ProjectId" id="20BiZLm0SR2AxNsW1rsRvzcdwkU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_interpreter_path" value="node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\industrieel_ingenieur\3de_jaar\frameworks\project\group21\frameworks_project\node_modules\typescript\lib" />
+  </component>
+  <component name="RunManager">
+    <configuration name="users" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000/users">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.users" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="06fb1f6c-9d3e-43a0-88ab-aaea0fc23dfb" name="Changes" comment="" />
-      <created>1635338915679</created>
+      <changelist id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="" />
+      <created>1635524435669</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1635338915679</updated>
-      <workItem from="1635338918642" duration="5476000" />
+      <updated>1635524435669</updated>
+      <workItem from="1635524437873" duration="380000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
