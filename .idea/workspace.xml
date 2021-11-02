@@ -2,19 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/group21.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/controller/LiedjeDAO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/routes/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Adres.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Adres.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Album.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Album.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Atriest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Atriest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Liedje.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Liedje.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Muzikant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Muzikant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Zanger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Zanger.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group21.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,10 +38,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../labo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\industrieel_ingenieur\3de_jaar\frameworks\project\group21\frameworks_project\node_modules\typescript\lib" />
   </component>
@@ -51,10 +66,25 @@
       <option name="presentableId" value="Default" />
       <updated>1635524435669</updated>
       <workItem from="1635524437873" duration="380000" />
+      <workItem from="1635673037439" duration="29000" />
+      <workItem from="1635858459679" duration="10005000" />
+      <workItem from="1635869162886" duration="10065000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -4,6 +4,12 @@ import {Album} from "./Album";
 @Entity()
 export class Genre {
 
+    constructor(naam: string, origine: string, albums: Album[]) {
+        this.naam = naam;
+        this.origine = origine;
+        this.albums = albums;
+    }
+
     @PrimaryColumn()
     naam: string;
 
@@ -11,6 +17,6 @@ export class Genre {
     origine: string;
 
     @OneToMany(()=>Album,album=>album.genre)
-    album:Album
+    albums:Album[]
 
 }

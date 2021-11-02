@@ -1,8 +1,14 @@
-import {Entity, PrimaryGeneratedColumn, Column,OneToOne,JoinColumn} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from "typeorm";
 import {Adres} from "./Adres";
 
 @Entity()
 export abstract class Artiest {
+
+    constructor(naam: string, geboortedatum: Date, adres: Adres) {
+        this.naam = naam;
+        this.geboortedatum = geboortedatum;
+        this.adres = adres;
+    }
 
     @PrimaryGeneratedColumn()
     id: number;
@@ -13,7 +19,7 @@ export abstract class Artiest {
     @Column()
     geboortedatum: Date;
 
-    @OneToOne(() => Adres)
+    @OneToOne(() => Adres, {cascade: true})
     @JoinColumn()
     adres: Adres;
 
