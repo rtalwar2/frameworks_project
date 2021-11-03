@@ -1,8 +1,8 @@
-import {Entity, Column} from "typeorm";
+import {Entity, Column, ChildEntity} from "typeorm";
 import {Artiest} from "./Atriest";
 import {Adres} from "./Adres";
 
-@Entity()
+@ChildEntity()
 export class Muzikant extends Artiest {
 
     constructor(naam: string, geboortedatum: Date, adres: Adres, instrument: string) {

@@ -2,7 +2,7 @@ import "reflect-metadata";
 import {createConnection} from "typeorm";
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import {liedjesRouter} from "./routes";
+import {albumRouter, genreRouter, liedjesRouter} from "./routes";
 import {router} from "./routes/index";
 import {Liedje} from "./entity/Liedje";
 import {Album} from "./entity/Album";
@@ -17,7 +17,7 @@ createConnection().then(async connection => {
     // create express app
     const app = express();
     app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({extended:false}))
+    app.use(bodyParser.urlencoded({extended: false}))
 
     // register express routes from defined application routes
     /*Routes.forEach(route => {
@@ -33,6 +33,10 @@ createConnection().then(async connection => {
     });*/
 
     app.use("/liedjes", liedjesRouter)
+
+    app.use("/albums", albumRouter)
+    app.use("/genres", genreRouter)
+
 
     app.use("/kaas", router)
 
@@ -63,20 +67,23 @@ createConnection().then(async connection => {
     }));
     let genre_2 = await connection.manager.findOne(Genre, "reggae");
 
+    let muzikant1 = new Muzikant("patat",
+        new Date("2018-03-16"),
+        new Adres("klaastraat", 8500, "Kortrijk", "France"), "blaaspijp")
+    let zanger1 = new Zanger("zanger",
+        new Date("2018-03-06"),
+        new Adres("klaahhstraat", 85500, "Kuurne", "NEWZEELAND"),
+        "Tenor")
+
+    await connection.manager.save(muzikant1);
+    await connection.manager.save(zanger1);
+
+
     await connection.manager.save(connection.manager.create(Album, {
         titel: "SKY",
         label: "KING ARTHUR RECORDS",
         liedjes: [new Liedje("kaas", 36, "torchelli"), new Liedje("kkas", 36, "torchelli36")],
-        artiesten: [
-            new Muzikant("patat",
-                new Date("2018-03-16"),
-                new Adres("klaastraat", 8500, "Kortrijk", "France"),
-                "blaaspijp"),
-            new Zanger("zanger",
-                new Date("2018-03-06"),
-                new Adres("klaahhstraat", 85500, "Kuurne", "NEWZEELAND"),
-                TOONHOOGTES.Tenor)
-        ],
+        artiesten: [muzikant1, zanger1],
         genre: genre_2
     }));
 

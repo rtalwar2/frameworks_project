@@ -17,16 +17,16 @@ export abstract class Album {
     @Column()
     label: string;
 
-    @ManyToMany(() => Liedje, {cascade: true})
+    @ManyToMany(() => Liedje, {cascade: true,eager:true})
     @JoinTable()
     liedjes: Liedje[];
 
 
-    @ManyToMany(() => Artiest, {cascade: true})
+    @ManyToMany(() => Artiest,{eager:true})
     @JoinTable()
     artiesten: Artiest[];
 
 
-    @ManyToOne(() => Genre, genre => genre.albums)
+    @ManyToOne(() => Genre, genre => genre.albums,{cascade:true,eager:true})
     genre: Genre;
 }
