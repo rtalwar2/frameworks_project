@@ -1,7 +1,8 @@
-import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, TableInheritance, Column, OneToOne, JoinColumn, ChildEntity} from "typeorm";
 import {Adres} from "./Adres";
 
 @Entity()
+@TableInheritance({ column: { type: "varchar", name: "type" } })
 export abstract class Artiest {
 
     constructor(naam: string, geboortedatum: Date, adres: Adres) {

@@ -1,18 +1,19 @@
-import {Entity, Column} from "typeorm";
+import {Entity, Column, ChildEntity} from "typeorm";
 import {Artiest} from "./Atriest";
 import {TOONHOOGTES} from "./TOONHOOGTES"
 import {Adres} from "./Adres";
 
-@Entity()
+@ChildEntity()
 export class Zanger extends Artiest {
 
-    constructor(naam: string, geboortedatum: Date, adres: Adres, toonhoogte: TOONHOOGTES) {
+    constructor(naam: string, geboortedatum: Date, adres: Adres, toonhoogte: string) {
         super(naam, geboortedatum, adres);
         this.toonhoogte = toonhoogte;
     }
 
     @Column()
-    toonhoogte: TOONHOOGTES;
+    toonhoogte:string
+    //toonhoogte: TOONHOOGTES;
 
 
 

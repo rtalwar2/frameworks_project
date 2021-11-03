@@ -34,7 +34,7 @@ export class LiedjeDAO {
             song.titel = request.body.titel;
             song.duur = request.body.duur;
             song.writer = request.body.writer;
-            return  this.liedjeRepo.save(song);
+            return this.liedjeRepo.save(song);
         } else {
             return new Error("het liedje bestaat niet")
         }

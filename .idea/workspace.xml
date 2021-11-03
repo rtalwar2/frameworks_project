@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
+<<<<<<< HEAD
+=======
+
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/controller/ArtiestenDAO.ts" afterDir="false" />
+>>>>>>> 7b3368640b744d9029707686a7aac6b5066ab24c
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/ArtiestenDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/ArtiestenDAO.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/routes.ts" afterDir="false" />
@@ -40,7 +27,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="20BiZLm0SR2AxNsW1rsRvzcdwkU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,17 +42,6 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="users" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000/users">
       <method v="2" />
     </configuration>
@@ -87,7 +62,9 @@
       <workItem from="1635524437873" duration="380000" />
       <workItem from="1635673037439" duration="29000" />
       <workItem from="1635858459679" duration="10005000" />
-      <workItem from="1635869162886" duration="10065000" />
+      <workItem from="1635869162886" duration="10473000" />
+      <workItem from="1635922679352" duration="12067000" />
+      <workItem from="1635942533439" duration="325000" />
     </task>
     <servers />
   </component>
@@ -105,11 +82,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1635939589981">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1635939589981" />
   </component>
 </project>
