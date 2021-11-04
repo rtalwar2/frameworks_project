@@ -1,4 +1,4 @@
-let host = "127.0.0.1:3000"
+let host = window.location.host
 
 function verwerkData(array) {
     let output = ""
@@ -89,10 +89,15 @@ function klik(e){
 
 }
 
+function keuze(){
+    console.log("je hebt iets gekozen");
+}
+
 function start() {
     console.log("hallo")
     LaadData('http://' + host + "/albums");//get alle albums
     document.querySelector("#js_zoekbutton").addEventListener("click",klik)
+    document.querySelector("#js_keuze").addEventListener("input",keuze)
 }
 
 start()

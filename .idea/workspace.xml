@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4/storage_v2/_src_/database/muziek.vQWqwA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4/storage_v2/_src_/database/muziek.vQWqwA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Album.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Album.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +73,9 @@
       <workItem from="1635922679352" duration="12067000" />
       <workItem from="1635942533439" duration="325000" />
       <workItem from="1636027754979" duration="290000" />
+      <workItem from="1636045571299" duration="1575000" />
+      <workItem from="1636051962962" duration="213000" />
+      <workItem from="1636060076877" duration="532000" />
     </task>
     <servers />
   </component>
