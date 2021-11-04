@@ -45,7 +45,6 @@ liedjesRouter.get('/search', function (req, res, next) {
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
-
 })
 
 liedjesRouter.route('/:id')
@@ -54,23 +53,21 @@ liedjesRouter.route('/:id')
         const result = dao.get_one(req, res, next);
         if (result instanceof Promise) {
             result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-
         } else if (result !== null && result !== undefined) {
             res.json(result);
         }
-
     })
     .delete(function (req, res, next) {
         let dao = new LiedjeDAO();
         const result = dao.remove(req, res, next);
         if (result instanceof Promise) {
             result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-
         } else if (result !== null && result !== undefined) {
             res.json(result);
         } else {
             res.send(result)///////////HIER EEN ERROR OPGOOIEN
         }
+        res.end();
     }).put(function (req, res, next) {
     let dao = new LiedjeDAO();
     const result = dao.update(req, res, next);
@@ -80,7 +77,6 @@ liedjesRouter.route('/:id')
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
-
 })
 
 
@@ -125,6 +121,7 @@ albumRouter.delete('/:id', function (req, res, next) {
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
+    res.end();
 })
 
 albumRouter.put('/:id/add', function (req, res, next) {
@@ -210,6 +207,7 @@ genreRouter.delete('/:id', function (req, res, next) {
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
+    res.end();
 })
 /*
 genreRouter.put('/:naam', function (req, res, next) {
@@ -223,6 +221,16 @@ genreRouter.put('/:naam', function (req, res, next) {
 })*/
 
 
+
+genreRouter.get('/:naam', function (req, res, next) {
+    let dao = new GenreDAO();
+    const result = dao.one(req, res, next);
+    if (result instanceof Promise) {
+        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+    } else if (result !== null && result !== undefined) {
+        res.json(result);
+    }
+});
 
 
 

@@ -20,7 +20,7 @@ export class ArtiestenDAO {
 
     async delete(request: Request, response: Response, next: NextFunction) {
         let artiest = await this.artiestenRepo.findOne(request.params.id);
-        await this.artiestenRepo.remove(artiest);
+        return await this.artiestenRepo.remove(artiest);
     }
 
 
