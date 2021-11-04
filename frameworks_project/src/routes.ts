@@ -1,50 +1,10 @@
 import {UserController} from "./controller/UserController";
 import {LiedjeDAO} from "./controller/LiedjeDAO";
-
-/*export const Routes = [
-    {
-        method: "get",
-        route: "/users",
-        controller: UserController,
-        action: "all"
-    }, {
-        method: "get",
-        route: "/users/:id",
-        controller: UserController,
-        action: "one"
-    }, {
-        method: "post",
-        route: "/users",
-        controller: UserController,
-        action: "save"
-    }, {
-        method: "delete",
-        route: "/users/:id",
-        controller: UserController,
-        action: "remove"
-    },
-    {
-        method: "get",
-        route: "/liedjes",
-        controller: LiedjeDAO,
-        action: "get_all"
-    },
-
-    {
-        method: "post",
-        route: "/liedjes",
-        controller: LiedjeDAO,
-        action: "insert"
-    }
-];*/
-
 import * as express from "express";
-import * as console from "console";
 import {AlbumDAO} from "./controller/AlbumDAO";
 import {GenreDAO} from "./controller/GenreDAO";
 
 export let liedjesRouter = express.Router();
-
 
 liedjesRouter.route('/')
     .get(function (req, res, next) {
@@ -186,6 +146,15 @@ albumRouter.put('/:id', function (req, res, next) {
         res.json(result);
     }
 })
+albumRouter.get('/search', function (req, res, next) {
+    let dao = new AlbumDAO();
+    const result = dao.search_titel(req, res, next);
+    if (result instanceof Promise) {
+        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+    } else if (result !== null && result !== undefined) {
+        res.json(result);
+    }
+})
 
 
 albumRouter.get('/:id', function (req, res, next) {
@@ -197,6 +166,8 @@ albumRouter.get('/:id', function (req, res, next) {
         res.json(result);
     }
 })
+
+
 //////////////////////////////////////////////////////////
 export let genreRouter = express.Router();
 
@@ -252,14 +223,6 @@ genreRouter.put('/:naam', function (req, res, next) {
 })*/
 
 
-genreRouter.get('/:naam', function (req, res, next) {
-    let dao = new GenreDAO();
-    const result = dao.one(req, res, next);
-    if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-    } else if (result !== null && result !== undefined) {
-        res.json(result);
-    }
-})
+
 
 

@@ -1,4 +1,4 @@
-import {getManager, getRepository} from "typeorm";
+import {getManager, getRepository, Like} from "typeorm";
 import {NextFunction, Request, Response} from "express";
 import {Album} from "../entity/Album";
 import * as console from "console";
@@ -65,6 +65,13 @@ export class AlbumDAO {
         } else {
             return new Error("het album bestaat niet")
         }
+    }
+
+    async search_titel(request: Request, response: Response, next: NextFunction) {
+        let zoek = "%" + request.query.titel + "%"
+        return this.albumRepo.find({titel: Like(zoek)});
+        // return this.liedjeRepo.find();
+
     }
 
 }

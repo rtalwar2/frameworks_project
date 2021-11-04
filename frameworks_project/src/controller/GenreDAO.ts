@@ -19,7 +19,8 @@ export class GenreDAO {
         return await this.genreRepo.createQueryBuilder("genre")
             .leftJoinAndSelect("genre.albums", "album")
             .where("genre.naam = :naam", { naam: request.params.naam })
-            .getOne();    }
+            .getOne();
+    }
 
     /*async insert(request: Request, response: Response, next: NextFunction) {
         return this.genreRepo.save(request.body);

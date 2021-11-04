@@ -11,6 +11,8 @@ import {Muzikant} from "./entity/Muzikant";
 import {Genre} from "./entity/Genre";
 import {Zanger} from "./entity/Zanger";
 import {TOONHOOGTES} from "./entity/TOONHOOGTES";
+import {LiedjeDAO} from "./controller/LiedjeDAO";
+import * as fs from "fs";
 
 createConnection().then(async connection => {
 
@@ -18,6 +20,26 @@ createConnection().then(async connection => {
     const app = express();
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: false}))
+    app.use(express.static(__dirname+'/statics'))
+
+    app.use(function (req, res, next) {
+
+        // Website you wish to allow to connect
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+        // Request methods you wish to allow
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+        // Request headers you wish to allow
+        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+        // Set to true if you need the website to include cookies in the requests sent
+        // to the API (e.g. in case you use sessions)
+        res.setHeader('Access-Control-Allow-Credentials', true);
+
+        // Pass to next layer of middleware
+        next();
+    });
 
     // register express routes from defined application routes
     /*Routes.forEach(route => {
@@ -31,6 +53,12 @@ createConnection().then(async connection => {
             }
         });
     });*/
+
+    app.get("/app", function (req, res, next) {
+        let read=fs.createReadStream(__dirname+"/statics/index.html")
+        read.pipe(res);
+    })
+
 
     app.use("/liedjes", liedjesRouter)
 
@@ -59,7 +87,7 @@ createConnection().then(async connection => {
     // insert new albums for test
     //genre:new Genre("superheavymetal","papuanewguinea",[]
 
-
+/*
     await connection.manager.save(connection.manager.create(Genre, {
         naam: "reggae",
         origine: "Jamaica",
@@ -86,7 +114,7 @@ createConnection().then(async connection => {
         artiesten: [muzikant1, zanger1],
         genre: genre_2
     }));
-
+*/
 
     /* await connection.manager.save(connection.manager.create(Liedje, {
          titel: "hello world",
