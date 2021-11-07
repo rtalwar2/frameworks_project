@@ -5,10 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4/storage_v2/_src_/database/muziek.vQWqwA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4/storage_v2/_src_/database/muziek.vQWqwA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Album.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Album.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +76,9 @@
       <workItem from="1636045571299" duration="1575000" />
       <workItem from="1636051962962" duration="213000" />
       <workItem from="1636060076877" duration="532000" />
+      <workItem from="1636215176477" duration="430000" />
+      <workItem from="1636273508696" duration="1472000" />
+      <workItem from="1636278728781" duration="3586000" />
     </task>
     <servers />
   </component>

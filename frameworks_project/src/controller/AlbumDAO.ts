@@ -22,17 +22,32 @@ export class AlbumDAO {
     async insert(request: Request, response: Response, next: NextFunction) {
         const entityManager = getManager(); // you can also get it via getConnection().manager
         //console.log(request.body.artiesten)
-        for (let artiest of request.body.artiesten) {
-            if (artiest.instrument != undefined) {
-                await entityManager.save(Muzikant, artiest)
-            } else if (artiest.toonhoogte != undefined) {
-                await entityManager.save(Zanger, artiest)
+        if (Array.isArray(request.body)) {
+            for (let album of request.body) {
+                for (let artiest of album.artiesten) {
+                    if (artiest.instrument != undefined) {
+                        await entityManager.save(Muzikant, artiest)
+                    } else if (artiest.toonhoogte != undefined) {
+                        await entityManager.save(Zanger, artiest)
 
+                    }
+                    // console.log(artiest)
+                }
             }
-            // console.log(artiest)
+        } else {
+            for (let artiest of request.body.artiesten) {
+                if (artiest.instrument != undefined) {
+                    await entityManager.save(Muzikant, artiest)
+                } else if (artiest.toonhoogte != undefined) {
+                    await entityManager.save(Zanger, artiest)
+
+                }
+                // console.log(artiest)
+            }
         }
         return this.albumRepo.save(request.body);
     }
+
 
     async addSongs(request: Request, response: Response, next: NextFunction) {
         let albumToaddSong = await this.albumRepo.findOne(request.params.id);

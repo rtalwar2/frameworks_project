@@ -27,8 +27,8 @@ export class GenreDAO {
     }*/
 
     async remove(request: Request, response: Response, next: NextFunction) {
-        let userToRemove = await this.genreRepo.findOne(request.params.id);
-        await this.genreRepo.remove(userToRemove);
+        let genreToRemove = await this.genreRepo.findOne(request.params.naam);
+        await this.genreRepo.remove(genreToRemove);
     }
     /*async update(request: Request, response: Response, next: NextFunction) {
         let genre_to_edit = await this.genreRepo.findOne(request.params.naam);

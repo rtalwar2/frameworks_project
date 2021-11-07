@@ -22,7 +22,7 @@ liedjesRouter.route('/')
         const result = dao.insert(req, res, next);
         if (result instanceof Promise) {
             result.then(result => {
-                if (result !== null && result !== undefined) {
+                if (result !== null && result !== undefined ) {
                     //console.log(result.id)
                     let url = "http://" + req.headers.host + req.originalUrl + "/" + result.id
                     res.header("Location", url)
@@ -99,8 +99,10 @@ albumRouter.post("/", function (req, res, next) {
         result.then(result => {
             if (result !== null && result !== undefined) {
                 //console.log(result.id)
-                let url = "http://" + req.headers.host + req.originalUrl + "/" + result.id
-                res.header("Location", url)
+                if(result.id!=undefined) {
+                    let url = "http://" + req.headers.host + req.originalUrl + "/" + result.id
+                    res.header("Location", url)
+                }
                 res.send(result)
             } else {
                 undefined
@@ -111,6 +113,8 @@ albumRouter.post("/", function (req, res, next) {
         res.json(result);
     }
 })
+
+
 
 
 albumRouter.delete('/:id', function (req, res, next) {
@@ -199,7 +203,7 @@ genreRouter.get('/', function (req, res, next) {
 })*/
 
 
-genreRouter.delete('/:id', function (req, res, next) {
+genreRouter.delete('/:naam', function (req, res, next) {
     let dao = new GenreDAO();
     const result = dao.remove(req, res, next);
     if (result instanceof Promise) {

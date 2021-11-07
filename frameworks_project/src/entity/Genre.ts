@@ -16,7 +16,7 @@ export class Genre {
     @Column()
     origine: string;
 
-    @OneToMany(()=>Album,album=>album.genre,{onDelete: "CASCADE"})
+    @OneToMany(()=>Album,album=>album.genre,)
     albums:Album[]
 
 }
