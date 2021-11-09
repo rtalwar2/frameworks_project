@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>artist form</title>
+    <script defer src="./scripts/artist_form.js"></script>
+
+</head>
+<body>
+<h1>Voek een artiest toe aan album <span id="js_albumnr"></span></h1>
+
+<label for="artist_naam">naam: </label>
+<input type="text" id="artist_naam">
+<label for="artist_geboortedatum">geboortedatum: </label>
+<input type="date" id="artist_geboortedatum">
+<br>
+<br>
+adres:<br>
+<label for="artist_straat">straat: </label>
+<input required type="text" id="artist_straat"></br>
+<label for="artist_postcode">postcode: </label>
+<input type="number" id="artist_postcode"><br>
+<label for="artist_gemeente">gemeente: </label>
+<input type="text" id="artist_gemeente"><br>
+<label for="artist_land">land: </label>
+<input type="text" id="artist_land"><br>
+
+<input checked type="radio" id="toonhoogte" name="soort" value="zanger">
+<label for="toonhoogte">zanger</label><br>
+<input type="radio" id="instrument" name="soort" value="muzikant">
+<label for="instrument">muzikant</label><br>
+
+
+<span id="js_specificatie"><label for="artist_specificatie">toonhoogte: </label>
+<input type="text" id="artist_specificatie"><br></span>
+
+
+<button id="js_voegToe" type="button">voeg Toe!</button>
+
+<p></p>
+</body>
+</html>
