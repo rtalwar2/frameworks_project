@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4/storage_v2/_src_/database/muziek.vQWqwA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4/storage_v2/_src_/database/muziek.vQWqwA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../datastructures/lab3/startcode/VaccinationSimulator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frameworks_project" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\industrieel_ingenieur\3de_jaar\frameworks\project\group21\frameworks_project\node_modules\typescript\lib" />
   </component>
@@ -96,5 +91,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1636483752132">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1636483752132" />
   </component>
 </project>
