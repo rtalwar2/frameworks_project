@@ -26,10 +26,10 @@ export class GenreDAO {
         return this.genreRepo.save(request.body);
     }*/
 
-    async remove(request: Request, response: Response, next: NextFunction) {
+  /*  async remove(request: Request, response: Response, next: NextFunction) {
         let genreToRemove = await this.genreRepo.findOne(request.params.naam);
         await this.genreRepo.remove(genreToRemove);
-    }
+    }*/
     /*async update(request: Request, response: Response, next: NextFunction) {
         let genre_to_edit = await this.genreRepo.findOne(request.params.naam);
         if (genre_to_edit != undefined) {

@@ -138,6 +138,16 @@ albumRouter.put('/:id/add', function (req, res, next) {
     }
 })
 
+albumRouter.put('/:id/add_artist', function (req, res, next) {
+    let dao = new AlbumDAO();
+    const result = dao.addArtists(req, res, next);
+    if (result instanceof Promise) {
+        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+    } else if (result !== null && result !== undefined) {
+        res.json(result);
+    }
+})
+
 albumRouter.put('/:id', function (req, res, next) {
     let dao = new AlbumDAO();
     const result = dao.update(req, res, next);
@@ -203,16 +213,16 @@ genreRouter.get('/', function (req, res, next) {
 })*/
 
 
-genreRouter.delete('/:naam', function (req, res, next) {
-    let dao = new GenreDAO();
-    const result = dao.remove(req, res, next);
-    if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-    } else if (result !== null && result !== undefined) {
-        res.json(result);
-    }
-    res.end();
-})
+// genreRouter.delete('/:naam', function (req, res, next) {
+//     let dao = new GenreDAO();
+//     const result = dao.remove(req, res, next);
+//     if (result instanceof Promise) {
+//         result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+//     } else if (result !== null && result !== undefined) {
+//         res.json(result);
+//     }
+//     res.end();
+// })
 /*
 genreRouter.put('/:naam', function (req, res, next) {
     let dao = new GenreDAO();

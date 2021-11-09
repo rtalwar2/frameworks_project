@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/album_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/artist_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/liedjes_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/album_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/artist_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/liedjes_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4/storage_v2/_src_/database/muziek.vQWqwA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4/storage_v2/_src_/database/muziek.vQWqwA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/entity/Genre.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
@@ -39,7 +48,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../datastructures/lab3/startcode/VaccinationSimulator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../2de_jaar/sem2/softwareproject/team-10" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\industrieel_ingenieur\3de_jaar\frameworks\project\group21\frameworks_project\node_modules\typescript\lib" />
   </component>
@@ -78,7 +88,8 @@
       <workItem from="1636060076877" duration="532000" />
       <workItem from="1636215176477" duration="430000" />
       <workItem from="1636273508696" duration="1472000" />
-      <workItem from="1636278728781" duration="3586000" />
+      <workItem from="1636278728781" duration="3990000" />
+      <workItem from="1636471620903" duration="13571000" />
     </task>
     <servers />
   </component>
