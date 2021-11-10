@@ -18,7 +18,7 @@ function clearForm() {
 
 function LaadData() {
     console.log(labelnaam)
-    let obj= {
+    let obj = {
         "naam": document.querySelector("#artist_naam").value,
         "geboortedatum": document.querySelector("#artist_geboortedatum").value,
         "adres": {
@@ -28,8 +28,8 @@ function LaadData() {
             "land": document.querySelector("#artist_land").value,
         }
     }
-       obj[labelnaam]=document.querySelector("#artist_specificatie").value
-console.log(obj)
+    obj[labelnaam] = document.querySelector("#artist_specificatie").value
+    console.log(obj)
     fetch('http://' + host + `/albums/${albumid}/add_artist`, {
         method: "PUT",
         headers: {

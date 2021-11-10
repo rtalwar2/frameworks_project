@@ -12,8 +12,8 @@ import {Genre} from "./entity/Genre";
 import {Zanger} from "./entity/Zanger";
 import {TOONHOOGTES} from "./entity/TOONHOOGTES";
 import {LiedjeDAO} from "./controller/LiedjeDAO";
-import * as fs from "fs";
 import {WebSocketServer} from "ws"
+var fs = require('fs');
 
 const server = new WebSocketServer({port: 8080});
 
@@ -69,7 +69,7 @@ createConnection().then(async connection => {
     });*/
 
     app.get("/app", function (req, res, next) {
-        let read=fs.createReadStream(__dirname+"/statics/index.html")
+        let read= fs.createReadStream(__dirname+"/statics/index.html")
         read.pipe(res);
     })
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 =======
       <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/album_form.html" afterDir="false" />
@@ -21,6 +22,10 @@
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" afterDir="false" />
 >>>>>>> b1beb8ed36ebcdbf93bfd7f1e2194512594852b0
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/artist_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/artist_form.js" afterDir="false" />
+>>>>>>> 9e7e3ac8ee523db1bb2fdd75bf5c19f54c773cf0
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +102,7 @@
       <workItem from="1636215176477" duration="430000" />
       <workItem from="1636273508696" duration="1472000" />
       <workItem from="1636278728781" duration="3990000" />
-      <workItem from="1636471620903" duration="13571000" />
+      <workItem from="1636471620903" duration="14385000" />
     </task>
     <servers />
   </component>

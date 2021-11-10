@@ -87,11 +87,7 @@ function LaadData(url) {
         });
 }
 
-
-
-
-
-function klik(e){
+function klik(e) {
     console.log("klik")
     let zoekveld=document.querySelector("#zoekveld_id")
     //console.log(zoekveld.value)
