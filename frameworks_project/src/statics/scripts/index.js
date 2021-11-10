@@ -138,6 +138,22 @@ function LaadData(url) {
 }
 
 
+/////////////////////////////////
+console.log("ws:"+host);
+
+let webSocket = new WebSocket("ws://localhost:8080");
+webSocket.addEventListener('open', (event) => {
+    console.log("SOCKET CLIENT GEOPEND");
+    webSocket.send('Hallo server');
+});
+
+webSocket.addEventListener('message', (event) => {
+    console.log("ONTVANGEN DATA VAN SERVER: " + event.data);
+});
+
+webSocket.addEventListener('close', () => console.log("CONNECTIE GESLOTEN TUSSEN SERVER"));
+/////////////////////////////////
+
 function klik(e) {
     console.log("klik")
     let zoekveld = document.querySelector("#zoekveld_id")

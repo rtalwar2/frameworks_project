@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/album_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/artist_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/liedjes_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/album_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/artist_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/liedjes_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks_project/src/statics/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9acefbd0-267f-44a3-a642-f3f270f20dd4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/AlbumDAO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/controller/GenreDAO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/artist_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/artist_form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +76,7 @@
       <workItem from="1636215176477" duration="430000" />
       <workItem from="1636273508696" duration="1472000" />
       <workItem from="1636278728781" duration="3990000" />
-      <workItem from="1636471620903" duration="13571000" />
+      <workItem from="1636471620903" duration="14385000" />
     </task>
     <servers />
   </component>
