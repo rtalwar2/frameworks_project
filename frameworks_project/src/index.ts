@@ -17,15 +17,18 @@ var fs = require('fs');
 
 const server = new WebSocketServer({port: 8080});
 
+//dit werkt WEL
 server.on('connection', socket => {
     socket.on('message', () => {
-        socket.send("SOCKET KUNNEN STARTEN");
+        socket.send("SOCKET SERVER OPENED");
     });
 });
 
-//server ontvangt bericht
-server.on('message', socket => {
-    socket.on('message')
+//server ontvangt bericht TODO WERKT NIET
+server.on('message', (socket) => {
+    socket.on('message', (message) => {
+        socket.send('ontvangen aan serverkant: '+ message);
+    })
 })
 
 createConnection().then(async connection => {
