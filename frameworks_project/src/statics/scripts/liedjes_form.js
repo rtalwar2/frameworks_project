@@ -11,7 +11,8 @@ document.querySelector("#song_writer").value="";
     document.querySelector("p").innerText = "invoeren gelukt";
 }
 
-function LaadData() {
+function LaadData(e) {
+    e.preventDefault()
     fetch('http://' + host + `/albums/${albumid}/add`, {
         method: "PUT",
         headers: {
@@ -43,7 +44,7 @@ function LaadData() {
 function start() {
     document.querySelector("#js_albumnr").innerText=albumid;
 
-    document.querySelector("#js_voegToe").addEventListener("click", LaadData)
+    document.querySelector("#js_voegToe").addEventListener("submit", LaadData)
 
 }
 

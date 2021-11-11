@@ -11,14 +11,15 @@
 </head>
 <body>
 <h1>Voek een liedje toe aan album <span id="js_albumnr"></span></h1>
-
-<label for="song_titel">titel: </label>
-<input type="text" id="song_titel">
-<label for="song_duur">duur: </label>
-<input type="number" id="song_duur">
-<label for="song_writer">writer: </label>
-<input type="text" id="song_writer">
-<button id="js_voegToe" type="button">voeg Toe!</button>
+<form id="js_voegToe">
+    <label for="song_titel">titel: </label>
+    <input required type="text" id="song_titel">
+    <label for="song_duur">duur: </label>
+    <input required type="number" id="song_duur">
+    <label for="song_writer">writer: </label>
+    <input required type="text" id="song_writer">
+    <button type="submit">voeg Toe!</button>
+</form>
 <p></p>
 </body>
 </html>

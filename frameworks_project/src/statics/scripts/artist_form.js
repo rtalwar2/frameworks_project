@@ -17,7 +17,8 @@ function clearForm() {
     document.querySelector("p").innerText = "invoeren gelukt";
 }
 
-function LaadData() {
+function LaadData(e) {
+    e.preventDefault()
     console.log(labelnaam)
     let obj = {
         "naam": document.querySelector("#artist_naam").value,
@@ -70,7 +71,7 @@ function klik(event) {
 function start() {
     document.querySelector("#js_albumnr").innerText = albumid;
     document.querySelectorAll('input[type="radio"]').forEach(el => el.addEventListener("click", klik))
-    document.querySelector("#js_voegToe").addEventListener("click", LaadData)
+    document.querySelector("#js_voegToe").addEventListener("submit", LaadData)
 
 }
 

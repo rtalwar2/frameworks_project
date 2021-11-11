@@ -10,7 +10,8 @@ function clearForm() {
     document.querySelector("p").innerText = "invoeren gelukt";
 }
 
-function LaadData() {
+function LaadData(e) {
+    e.preventDefault()
     fetch('http://' + host + "/albums", {
         method: "POST",
         headers: {
@@ -44,7 +45,7 @@ function LaadData() {
 
 function start() {
 
-    document.querySelector("#js_voegToe").addEventListener("submit", ()=>console.log("data"))
+    document.querySelector("#js_voegToe").addEventListener("submit", LaadData)
 }
 
 start()

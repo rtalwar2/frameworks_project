@@ -12,34 +12,37 @@
 <body>
 <h1>Voek een artiest toe aan album <span id="js_albumnr"></span></h1>
 
-<label for="artist_naam">naam: </label>
-<input type="text" id="artist_naam">
-<label for="artist_geboortedatum">geboortedatum: </label>
-<input type="date" id="artist_geboortedatum">
-<br>
-<br>
-adres:<br>
-<label for="artist_straat">straat: </label>
-<input required type="text" id="artist_straat"></br>
-<label for="artist_postcode">postcode: </label>
-<input type="number" id="artist_postcode"><br>
-<label for="artist_gemeente">gemeente: </label>
-<input type="text" id="artist_gemeente"><br>
-<label for="artist_land">land: </label>
-<input type="text" id="artist_land"><br>
-
-<input checked type="radio" id="toonhoogte" name="soort" value="zanger">
-<label for="toonhoogte">zanger</label><br>
-<input type="radio" id="instrument" name="soort" value="muzikant">
-<label for="instrument">muzikant</label><br>
+<form id="js_voegToe">
 
 
-<span id="js_specificatie"><label for="artist_specificatie">toonhoogte: </label>
-<input type="text" id="artist_specificatie"><br></span>
+    <label for="artist_naam">naam: </label>
+    <input required type="text" id="artist_naam">
+    <label for="artist_geboortedatum">geboortedatum: </label>
+    <input required type="date" id="artist_geboortedatum">
+    <br>
+    <br>
+    adres:<br>
+    <label for="artist_straat">straat: </label>
+    <input required type="text" id="artist_straat"></br>
+    <label for="artist_postcode">postcode: </label>
+    <input required type="number" id="artist_postcode"><br>
+    <label for="artist_gemeente">gemeente: </label>
+    <input required type="text" id="artist_gemeente"><br>
+    <label for="artist_land">land: </label>
+    <input required type="text" id="artist_land"><br>
+
+    <input required checked type="radio" id="toonhoogte" name="soort" value="zanger">
+    <label for="toonhoogte">zanger</label><br>
+    <input required type="radio" id="instrument" name="soort" value="muzikant">
+    <label for="instrument">muzikant</label><br>
 
 
-<button id="js_voegToe" type="button">voeg Toe!</button>
+    <span id="js_specificatie"><label for="artist_specificatie">toonhoogte: </label>
+<input required type="text" id="artist_specificatie"><br></span>
 
+
+    <button type="submit">voeg Toe!</button>
+</form>
 <p></p>
 </body>
 </html>
