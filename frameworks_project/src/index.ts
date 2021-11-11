@@ -14,20 +14,20 @@ import {TOONHOOGTES} from "./entity/TOONHOOGTES";
 import {LiedjeDAO} from "./controller/LiedjeDAO";
 import * as fs from "fs";
 
-import {WebSocketServer} from "ws"
-
-const server = new WebSocketServer({port: 8080});
-
-server.on('connection', socket => {
-    socket.on('message', () => {
-        socket.send("SOCKET KUNNEN STARTEN");
-    });
-});
-
-//server ontvangt bericht
-server.on('message', socket => {
-    socket.on('message')
-})
+// import {WebSocketServer} from "ws"
+//
+// const server = new WebSocketServer({port: 8080});
+//
+// server.on('connection', socket => {
+//     socket.on('message', () => {
+//         socket.send("SOCKET KUNNEN STARTEN");
+//     });
+// });
+//
+// //server ontvangt bericht
+// server.on('message', socket => {
+//     socket.on('message')
+// })
 
 createConnection().then(async connection => {
 
