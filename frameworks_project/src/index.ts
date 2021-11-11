@@ -14,22 +14,37 @@ import {TOONHOOGTES} from "./entity/TOONHOOGTES";
 import {LiedjeDAO} from "./controller/LiedjeDAO";
 
 var fs = require('fs');
-import {WebSocketServer} from "ws";
-const server = new WebSocketServer({port: 8080});
+import WebSocket, { WebSocketServer } from 'ws';
 
-//dit werkt WEL
-server.on('connection', socket => {
-    socket.on('message', (event) => {
-        socket.send(event.data);
+const wss = new WebSocketServer({ port: 8080 });
+
+wss.on('connection', function connection(ws) {
+    ws.on('message', function message(data) {
+        console.log('received: %s', data);
+        wss.clients.forEach(function each(client) {
+            if (client !== ws) {
+                client.send("update");
+            }
+        });
     });
 });
 
+
+//dit werkt WEL
+// server.on('connection', socket => {
+//     socket.on('message', function message(data) {
+//         console.log("er is een nieuwe verbinding");
+//         console.log('received: %s', data);
+//         //socket.send(event.data);
+//     });
+// });
+
 //server ontvangt bericht TODO WERKT NIET
-server.on('message', (socket) => {
-    socket.on('message', (message) => {
-        console.log('ontvangen aan serverkant: '+ message);
-    })
-})
+// wss.on('message', (socket) => {
+//     socket.on('message', (message) => {
+//         console.log('ontvangen aan serverkant: '+ message);
+//     })
+// })
 
 createConnection().then(async connection => {
 

@@ -1,5 +1,6 @@
 let host = window.location.host
 
+const webSocket = new WebSocket("ws://localhost:8080");
 
 function clearForm() {
     document.querySelector("#album_titel").value = "";
@@ -29,7 +30,7 @@ function LaadData() {
             if (!response.ok) {
                 throw Error(`Probleem bij de fetch(). Status Code: ${response.status}`);
             } else {
-                webSocket.send("Nieuwe album gepost op server!");
+                webSocket.send('update');
                 console.info('Er is een response teruggekomen van de server');
                 clearForm();
             }

@@ -2,13 +2,16 @@ let host = window.location.host
 
 const webSocket = new WebSocket("ws://localhost:8080");
 
-webSocket.addEventListener('open', (event) => {
-    console.log("SOCKET CLIENT GEOPEND");
-    webSocket.send('Hallo server');
-});
+// webSocket.addEventListener('open', (event) => {
+//     console.log("SOCKET CLIENT GEOPEND");
+//     webSocket.send('HALLO');
+// });
 
 webSocket.addEventListener('message', (event) => {
     console.log("ONTVANGEN DATA VAN SERVER: " + event.data);
+    if(event.data=="update"){
+        LaadData('http://' + host + "/albums");//get alle albums
+    }
 });
 
 webSocket.addEventListener('close', () => console.log("CONNECTIE GESLOTEN TUSSEN SERVER"));
@@ -159,6 +162,7 @@ function klik(e) {
 
 function keuze(e) {
     console.log("je hebt iets gekozen");
+  //  webSocket.send('keuze');
 
 }
 
