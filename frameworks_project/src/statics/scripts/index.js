@@ -1,6 +1,17 @@
 let host = window.location.host
 
+const webSocket = new WebSocket("ws://localhost:8080");
 
+webSocket.addEventListener('open', (event) => {
+    console.log("SOCKET CLIENT GEOPEND");
+    webSocket.send('Hallo server');
+});
+
+webSocket.addEventListener('message', (event) => {
+    console.log("ONTVANGEN DATA VAN SERVER: " + event.data);
+});
+
+webSocket.addEventListener('close', () => console.log("CONNECTIE GESLOTEN TUSSEN SERVER"));
 
 function addSong(e){
     console.log(e.currentTarget.parentElement.dataset.album_id)
@@ -136,22 +147,6 @@ function LaadData(url) {
             console.error(`fout bij verwerken json ${error}`);
         });
 }
-
-
-/////////////////////////////////
-
-const webSocket = new WebSocket("ws://localhost:8080");
-webSocket.addEventListener('open', (event) => {
-    console.log("SOCKET CLIENT GEOPEND");
-    webSocket.send('Hallo server');
-});
-
-webSocket.addEventListener('message', (event) => {
-    console.log("ONTVANGEN DATA VAN SERVER: " + event.data);
-});
-
-webSocket.addEventListener('close', () => console.log("CONNECTIE GESLOTEN TUSSEN SERVER"));
-/////////////////////////////////
 
 function klik(e) {
     console.log("klik")
