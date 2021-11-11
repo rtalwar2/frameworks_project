@@ -79,19 +79,23 @@ createConnection().then(async connection => {
     app.use("/liedjes", liedjesRouter)
     app.use("/albums", albumRouter)
     app.use("/genres", genreRouter)
+    app.use(function(req,res,next){
+        let err = new Error('Dat pad bestaat niet!');
+        res.status(404);
+        next(err);
+        });
     app.use(errorHandler)
 
-    function errorHandler (err, req, res, next) {
-        if (res.headersSent) {
-            console.log("kaas2")
 
-            return next(err)
-        }
-        console.log(err)
-        console.log("kaas")
-        res.status(501)
-        res.render(err)
+    function errorHandler (err, req, res, next) {
+        res.locals.message = err.message;
+        res.locals.error =
+            req.app.get('env') === 'development' ? err : {};
+        res.status(404);
+        res.send("Dit pad bestaat niet! Keer terug naar de hoofdpagina of voer in een ander pad in.")
     }
+    module.exports = app;
+
     app.listen(3000);
 
     console.log("Express server has started on port 3000. Open http://193.191.169.108:3000/ to see results");
