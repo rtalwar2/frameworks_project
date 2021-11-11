@@ -24,8 +24,12 @@
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/index.js" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/artist_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/statics/scripts/artist_form.js" afterDir="false" />
 >>>>>>> 9e7e3ac8ee523db1bb2fdd75bf5c19f54c773cf0
+=======
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/index.ts" afterDir="false" />
+>>>>>>> 432f9facbd74094fd1d674bafd4fd8a852a3cb58
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +62,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frameworks_project" />
 =======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../2de_jaar/sem2/softwareproject/team-10" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../labojdbc/JDBCLabo" />
+>>>>>>> 432f9facbd74094fd1d674bafd4fd8a852a3cb58
     <property name="list.type.of.created.stylesheet" value="CSS" />
 >>>>>>> b1beb8ed36ebcdbf93bfd7f1e2194512594852b0
     <property name="nodejs_package_manager_path" value="npm" />
@@ -103,6 +111,12 @@
       <workItem from="1636273508696" duration="1472000" />
       <workItem from="1636278728781" duration="3990000" />
       <workItem from="1636471620903" duration="14385000" />
+      <workItem from="1636529223624" duration="581000" />
+      <workItem from="1636548201299" duration="103000" />
+      <workItem from="1636556086347" duration="494000" />
+      <workItem from="1636556693720" duration="189000" />
+      <workItem from="1636558027219" duration="185000" />
+      <workItem from="1636558334060" duration="377000" />
     </task>
     <servers />
   </component>

@@ -12,6 +12,7 @@ import {Genre} from "./entity/Genre";
 import {Zanger} from "./entity/Zanger";
 import {TOONHOOGTES} from "./entity/TOONHOOGTES";
 import {LiedjeDAO} from "./controller/LiedjeDAO";
+
 import {WebSocketServer} from "ws"
 var fs = require('fs');
 
@@ -30,6 +31,7 @@ server.on('message', (socket) => {
         socket.send('ontvangen aan serverkant: '+ message);
     })
 })
+
 
 createConnection().then(async connection => {
 
