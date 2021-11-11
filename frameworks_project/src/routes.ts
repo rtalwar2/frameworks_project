@@ -1,4 +1,3 @@
-import {UserController} from "./controller/UserController";
 import {LiedjeDAO} from "./controller/LiedjeDAO";
 import * as express from "express";
 import {AlbumDAO} from "./controller/AlbumDAO";
