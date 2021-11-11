@@ -3,7 +3,6 @@ import {createConnection} from "typeorm";
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import {albumRouter, genreRouter, liedjesRouter} from "./routes";
-import {router} from "./routes/index";
 import {Liedje} from "./entity/Liedje";
 import {Album} from "./entity/Album";
 import {Adres} from "./entity/Adres";
