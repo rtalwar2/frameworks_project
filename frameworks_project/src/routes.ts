@@ -3,8 +3,25 @@ import {LiedjeDAO} from "./controller/LiedjeDAO";
 import * as express from "express";
 import {AlbumDAO} from "./controller/AlbumDAO";
 import {GenreDAO} from "./controller/GenreDAO";
+//import {WebSocketServer} from "ws";
 
 export let liedjesRouter = express.Router();
+/*
+const server = new WebSocketServer({port: 8080});
+
+//dit werkt WEL
+server.on('connection', socket => {
+    socket.on('message', (event) => {
+        //console.log(even)
+    });
+});
+
+//server ontvangt bericht TODO WERKT NIET
+server.on('message', (socket) => {
+    socket.on('message', (message) => {
+        socket.send('ontvangen aan serverkant: '+ message);
+    })
+})*/
 
 liedjesRouter.route('/')
     .get(function (req, res, next) {

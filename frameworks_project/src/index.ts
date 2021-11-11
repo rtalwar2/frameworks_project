@@ -13,25 +13,23 @@ import {Zanger} from "./entity/Zanger";
 import {TOONHOOGTES} from "./entity/TOONHOOGTES";
 import {LiedjeDAO} from "./controller/LiedjeDAO";
 
-import {WebSocketServer} from "ws"
 var fs = require('fs');
-
+import {WebSocketServer} from "ws";
 const server = new WebSocketServer({port: 8080});
 
 //dit werkt WEL
 server.on('connection', socket => {
-    socket.on('message', () => {
-        socket.send("SOCKET SERVER OPENED");
+    socket.on('message', (event) => {
+        socket.send(event.data);
     });
 });
 
 //server ontvangt bericht TODO WERKT NIET
 server.on('message', (socket) => {
     socket.on('message', (message) => {
-        socket.send('ontvangen aan serverkant: '+ message);
+        console.log('ontvangen aan serverkant: '+ message);
     })
 })
-
 
 createConnection().then(async connection => {
 
@@ -72,11 +70,6 @@ createConnection().then(async connection => {
             }
         });
     });*/
-
-    app.get("/app", function (req, res, next) {
-        let read= fs.createReadStream(__dirname+"/statics/index.html")
-        read.pipe(res);
-    })
 
 
     app.use("/liedjes", liedjesRouter)

@@ -29,6 +29,7 @@ function LaadData() {
             if (!response.ok) {
                 throw Error(`Probleem bij de fetch(). Status Code: ${response.status}`);
             } else {
+                webSocket.send("Nieuwe album gepost op server!");
                 console.info('Er is een response teruggekomen van de server');
                 clearForm();
             }
