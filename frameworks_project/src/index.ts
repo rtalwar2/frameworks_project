@@ -12,22 +12,26 @@ import {Genre} from "./entity/Genre";
 import {Zanger} from "./entity/Zanger";
 import {TOONHOOGTES} from "./entity/TOONHOOGTES";
 import {LiedjeDAO} from "./controller/LiedjeDAO";
-import * as fs from "fs";
+//import * as fs from "fs";
+var fs = require('fs');
 
-// import {WebSocketServer} from "ws"
-//
-// const server = new WebSocketServer({port: 8080});
-//
-// server.on('connection', socket => {
-//     socket.on('message', () => {
-//         socket.send("SOCKET KUNNEN STARTEN");
-//     });
-// });
-//
-// //server ontvangt bericht
-// server.on('message', socket => {
-//     socket.on('message')
-// })
+import {WebSocketServer} from "ws"
+
+const server = new WebSocketServer({port: 8080});
+
+server.on('connection', socket => {
+    socket.on('message', () => {
+        socket.send("SOCKET SERVER OPENED");
+    });
+});
+
+//server ontvangt bericht TODO WERKT NIET
+server.on('message', (socket) => {
+    socket.on('message', (message) => {
+        socket.send('ontvangen aan serverkant: '+ message);
+    })
+})
+
 
 createConnection().then(async connection => {
 
