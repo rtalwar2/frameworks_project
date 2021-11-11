@@ -91,12 +91,8 @@ createConnection().then(async connection => {
 
 
     app.use("/liedjes", liedjesRouter)
-
     app.use("/albums", albumRouter)
     app.use("/genres", genreRouter)
-
-
-    app.use("/kaas", router)
 
     app.use(function (req, res, next) {
         let err = new Error("not found");
