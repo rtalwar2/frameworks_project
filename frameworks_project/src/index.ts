@@ -23,7 +23,11 @@ wss.on('connection', function connection(ws) {
         console.log('received: %s', data);
         wss.clients.forEach(function each(client) {
             if (client !== ws) {
-                client.send("update");
+                if(data == "update"){
+                    client.send("update");
+                } else if (data.includes("update_specific")){
+                    client.send(data.toString());
+                }
             }
         });
     });

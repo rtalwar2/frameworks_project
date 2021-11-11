@@ -11,6 +11,9 @@ webSocket.addEventListener('message', (event) => {
     console.log("ONTVANGEN DATA VAN SERVER: " + event.data);
     if(event.data=="update"){
         LaadData('http://' + host + "/albums");//get alle albums
+    } else if(event.data.includes("update_specific") && document.querySelector(`[data-album_id="${event.data.substring(16)}"]`).classList.contains("js_detail")){
+        getDetail(event.data.substring(16))
+        console.log("update specific "+event.data.substring(16));
     }
 });
 
@@ -81,9 +84,11 @@ function showDetail(id,album) {
 
 
 function getDetail(e) {
-    let id=e.currentTarget.dataset.album_id
-
-    fetch('http://' + host + '/albums/' + e.currentTarget.dataset.album_id, {
+    let id = e
+    if(isNaN(e)) {
+        id = e.currentTarget.dataset.album_id
+    }
+    fetch('http://' + host + '/albums/' + id, {
         method: "GET",
         headers: {
             "accept": "*/*",

@@ -1,5 +1,6 @@
 let host = window.location.host
 
+const webSocket = new WebSocket("ws://"+window.location.hostname+":8080");
 
 let albumid = localStorage.getItem("selected_album")
 console.log(albumid)
@@ -42,6 +43,7 @@ function LaadData() {
             if (!response.ok) {
                 throw Error(`Probleem bij de fetch(). Status Code: ${response.status}`);
             } else {
+                webSocket.send('update_specific_'+albumid);
                 console.info('Er is een response teruggekomen van de server');
                 clearForm();
             }
