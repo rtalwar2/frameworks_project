@@ -17,7 +17,7 @@ export abstract class Album {
     @Column()
     label: string;
 
-    @ManyToMany(() => Liedje, {cascade: true,eager:true,onDelete: "CASCADE"})
+    @ManyToMany(() => Liedje, {cascade: true,eager:true})
     @JoinTable()
     liedjes: Liedje[];
 

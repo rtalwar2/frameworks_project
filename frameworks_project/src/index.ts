@@ -33,21 +33,7 @@ wss.on('connection', function connection(ws) {
 });
 
 
-//dit werkt WEL
-// server.on('connection', socket => {
-//     socket.on('message', function message(data) {
-//         console.log("er is een nieuwe verbinding");
-//         console.log('received: %s', data);
-//         //socket.send(event.data);
-//     });
-// });
 
-//server ontvangt bericht TODO WERKT NIET
-// wss.on('message', (socket) => {
-//     socket.on('message', (message) => {
-//         console.log('ontvangen aan serverkant: '+ message);
-//     })
-// })
 
 createConnection().then(async connection => {
 
@@ -92,7 +78,7 @@ createConnection().then(async connection => {
         res.locals.error =
             req.app.get('env') === 'development' ? err : {};
         res.status(404);
-        res.send("Dit pad bestaat niet! Keer terug naar de hoofdpagina of voer in een ander pad in.")
+        res.send("oeps... er ging iets mis ಥ_ಥ")
     }
     module.exports = app;
 

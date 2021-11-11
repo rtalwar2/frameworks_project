@@ -2,10 +2,6 @@ let host = window.location.host
 
 const webSocket = new WebSocket("ws://"+window.location.hostname+":8080");
 
-// webSocket.addEventListener('open', (event) => {
-//     console.log("SOCKET CLIENT GEOPEND");
-//     webSocket.send('HALLO');
-// });
 
 webSocket.addEventListener('message', (event) => {
     console.log("ONTVANGEN DATA VAN SERVER: " + event.data);
@@ -79,7 +75,6 @@ function showDetail(id,album) {
     div.innerHTML = output;
     document.querySelectorAll(".voeg_liedje_toe").forEach(el=>el.addEventListener("click",addSong))
     document.querySelectorAll(".voeg_artiesten_toe").forEach(el=>el.addEventListener("click",addArtist))
-
 }
 
 
@@ -165,16 +160,9 @@ function klik(e) {
     //LaadData('http://' + host + "/genres/"+zoekveld.value);//get albums met bepaalde genre
 }
 
-function keuze(e) {
-    console.log("je hebt iets gekozen");
-  //  webSocket.send('keuze');
-
-}
-
 function start() {
     console.log("hallo")
     LaadData('http://' + host + "/albums");//get alle albums
     document.querySelector("#js_zoekbutton").addEventListener("click", klik)
-    document.querySelector("#js_keuze").addEventListener("input", keuze)
 }
 start()

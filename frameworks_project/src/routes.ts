@@ -2,33 +2,26 @@ import {LiedjeDAO} from "./controller/LiedjeDAO";
 import * as express from "express";
 import {AlbumDAO} from "./controller/AlbumDAO";
 import {GenreDAO} from "./controller/GenreDAO";
-//import {WebSocketServer} from "ws";
+import * as console from "console";
 
 export let liedjesRouter = express.Router();
-/*
-const server = new WebSocketServer({port: 8080});
 
-//dit werkt WEL
-server.on('connection', socket => {
-    socket.on('message', (event) => {
-        //console.log(even)
-    });
-});
-
-//server ontvangt bericht TODO WERKT NIET
-server.on('message', (socket) => {
-    socket.on('message', (message) => {
-        socket.send('ontvangen aan serverkant: '+ message);
-    })
-})*/
 
 liedjesRouter.route('/')
     .get(function (req, res, next) {
         let dao = new LiedjeDAO();
         const result = dao.get_all(req, res, next);
         if (result instanceof Promise) {
-            result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+            result.then(result => {
+                if (result !== null && result !== undefined) {
+                    res.send(result)
+                } else {
+                    next()
+                }
+            }).catch((err) => {
 
+                res.end()
+            });
         } else if (result !== null && result !== undefined) {
             res.json(result);
         }
@@ -38,13 +31,13 @@ liedjesRouter.route('/')
         const result = dao.insert(req, res, next);
         if (result instanceof Promise) {
             result.then(result => {
-                if (result !== null && result !== undefined ) {
+                if (result !== null && result !== undefined) {
                     //console.log(result.id)
                     let url = "http://" + req.headers.host + req.originalUrl + "/" + result.id
                     res.header("Location", url)
                     res.send(result)
                 } else {
-                    undefined
+                    next()
                 }
             });
 
@@ -56,8 +49,16 @@ liedjesRouter.get('/search', function (req, res, next) {
     let dao = new LiedjeDAO();
     const result = dao.search_titel(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                next()
+            }
+        }).catch((err) => {
 
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
@@ -68,7 +69,16 @@ liedjesRouter.route('/:id')
         let dao = new LiedjeDAO();
         const result = dao.get_one(req, res, next);
         if (result instanceof Promise) {
-            result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+            result.then(result => {
+                if (result !== null && result !== undefined) {
+                    res.send(result)
+                } else {
+                    next()
+                }
+            }).catch((err) => {
+
+                res.end()
+            });
         } else if (result !== null && result !== undefined) {
             res.json(result);
         }
@@ -77,19 +87,29 @@ liedjesRouter.route('/:id')
         let dao = new LiedjeDAO();
         const result = dao.remove(req, res, next);
         if (result instanceof Promise) {
-            result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-        } else if (result !== null && result !== undefined) {
-            res.json(result);
-        } else {
-            res.send(result)///////////HIER EEN ERROR OPGOOIEN
+            result.then(result => {
+                if (result !== null && result !== undefined) {
+                    res.send(result)
+                } else {
+                    res.status(204).send()
+                }
+            }).catch((err) => {
+                res.end()
+            });
         }
-        res.end();
     }).put(function (req, res, next) {
     let dao = new LiedjeDAO();
     const result = dao.update(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                next()
+            }
+        }).catch((err) => {
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
@@ -102,7 +122,17 @@ albumRouter.get('/', function (req, res, next) {
     let dao = new AlbumDAO();
     const result = dao.all(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+
+                next()
+            }
+        }).catch((err) => {
+
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
@@ -113,16 +143,22 @@ albumRouter.post("/", function (req, res, next) {
     const result = dao.insert(req, res, next);
     if (result instanceof Promise) {
         result.then(result => {
+            //  console.log("ik geraak hier")
             if (result !== null && result !== undefined) {
                 //console.log(result.id)
-                if(result.id!=undefined) {
+                if (result.id != undefined) {
                     let url = "http://" + req.headers.host + req.originalUrl + "/" + result.id
                     res.header("Location", url)
                 }
                 res.send(result)
             } else {
-                undefined
+
+                next()
+
             }
+        }).catch((err) => {
+            console.log("error")
+            res.end();
         });
 
     } else if (result !== null && result !== undefined) {
@@ -131,24 +167,35 @@ albumRouter.post("/", function (req, res, next) {
 })
 
 
-
-
 albumRouter.delete('/:id', function (req, res, next) {
     let dao = new AlbumDAO();
     const result = dao.remove(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-    } else if (result !== null && result !== undefined) {
-        res.json(result);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                res.status(204).send()
+            }
+        }).catch((err) => {
+            res.end()
+        });
     }
-    res.end();
 })
 
 albumRouter.put('/:id/add', function (req, res, next) {
     let dao = new AlbumDAO();
     const result = dao.addSongs(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                next()
+            }
+        }).catch((err) => {
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
@@ -158,26 +205,36 @@ albumRouter.put('/:id/add_artist', function (req, res, next) {
     let dao = new AlbumDAO();
     const result = dao.addArtists(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                next()
+            }
+        }).catch((err) => {
+
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
 })
 
-albumRouter.put('/:id', function (req, res, next) {
-    let dao = new AlbumDAO();
-    const result = dao.update(req, res, next);
-    if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-    } else if (result !== null && result !== undefined) {
-        res.json(result);
-    }
-})
+
 albumRouter.get('/search', function (req, res, next) {
     let dao = new AlbumDAO();
     const result = dao.search_titel(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                next()
+            }
+        }).catch((err) => {
+
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
@@ -188,8 +245,17 @@ albumRouter.get('/:id', function (req, res, next) {
     let dao = new AlbumDAO();
     const result = dao.one(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                next()
+            }
+        }).catch((err) => {
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
+        console.log("nee sorry ik zit hier")
         res.json(result);
     }
 })
@@ -202,61 +268,35 @@ genreRouter.get('/', function (req, res, next) {
     let dao = new GenreDAO();
     const result = dao.all(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                next()
+            }
+        }).catch((err) => {
+
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }
 })
 
-/*genreRouter.post("/", function (req, res, next) {
-    let dao = new GenreDAO();
-    const result = dao.insert(req, res, next);
-    if (result instanceof Promise) {
-        result.then(result => {
-            if (result !== null && result !== undefined) {
-                //console.log(result.id)
-                let url = "http://" + req.headers.host + req.originalUrl + "/" + result.naam
-                res.header("Location", url)
-                res.send(result)
-            } else {
-                undefined
-            }
-        });
-
-    } else if (result !== null && result !== undefined) {
-        res.json(result);
-    }
-})*/
-
-
-// genreRouter.delete('/:naam', function (req, res, next) {
-//     let dao = new GenreDAO();
-//     const result = dao.remove(req, res, next);
-//     if (result instanceof Promise) {
-//         result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-//     } else if (result !== null && result !== undefined) {
-//         res.json(result);
-//     }
-//     res.end();
-// })
-/*
-genreRouter.put('/:naam', function (req, res, next) {
-    let dao = new GenreDAO();
-    const result = dao.update(req, res, next);
-    if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-    } else if (result !== null && result !== undefined) {
-        res.json(result);
-    }
-})*/
-
-
-
 genreRouter.get('/:naam', function (req, res, next) {
     let dao = new GenreDAO();
     const result = dao.one(req, res, next);
     if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+        result.then(result => {
+            if (result !== null && result !== undefined) {
+                res.send(result)
+            } else {
+                next()
+            }
+        }).catch((err) => {
+
+            res.end()
+        });
     } else if (result !== null && result !== undefined) {
         res.json(result);
     }

@@ -20,8 +20,7 @@ export class AlbumDAO {
     }
 
     async insert(request: Request, response: Response, next: NextFunction) {
-        const entityManager = getManager(); // you can also get it via getConnection().manager
-        //console.log(request.body.artiesten)
+        const entityManager = getManager();
         if (Array.isArray(request.body)) {
             for (let album of request.body) {
                 if (album.artiesten != undefined) {
@@ -71,19 +70,13 @@ export class AlbumDAO {
         console.log("ik wordt uitgevoerd")
         let albumToaddArtist = await this.albumRepo.findOne(request.params.id);
         const entityManager = getManager(); // you can also get it via getConnection().manager
-        if (Array.isArray(request.body)) {
-
-            for (let artiest of request.body) {
-                albumToaddArtist.artiesten.push(artiest);
-                if (artiest.instrument != undefined) {
-                    await entityManager.save(Muzikant, artiest)
-                } else if (artiest.toonhoogte != undefined) {
-                    await entityManager.save(Zanger, artiest)
-                }
-            }
+        let arr = []
+        if (!Array.isArray(request.body)) {
+            arr.push(request.body)
         } else {
-            let artiest = request.body
-            console.log(artiest)
+            arr = request.body
+        }
+        for (let artiest of arr) {
             albumToaddArtist.artiesten.push(artiest);
             if (artiest.instrument != undefined) {
                 await entityManager.save(Muzikant, artiest)
@@ -94,20 +87,6 @@ export class AlbumDAO {
         return this.albumRepo.save(albumToaddArtist);
     }
 
-
-    async update(request: Request, response: Response, next: NextFunction) {
-        let album = await this.albumRepo.findOne(request.params.id);
-        if (album != undefined) {
-            album.titel = request.body.titel;
-            album.label = request.body.label;
-            album.liedjes = request.body.liedjes;
-            album.artiesten = request.body.artiesten;
-            album.genre = request.body.genre;
-            return this.albumRepo.save(album);
-        } else {
-            return new Error("het album bestaat niet")
-        }
-    }
 
     async remove(request: Request, response: Response, next: NextFunction) {
         let albumToRemove = await this.albumRepo.findOne(request.params.id);
@@ -122,8 +101,6 @@ export class AlbumDAO {
     async search_titel(request: Request, response: Response, next: NextFunction) {
         let zoek = "%" + request.query.titel + "%"
         return this.albumRepo.find({titel: Like(zoek)});
-        // return this.liedjeRepo.find();
-
     }
 
 }
