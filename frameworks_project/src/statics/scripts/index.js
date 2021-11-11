@@ -1,6 +1,6 @@
 let host = window.location.host
 
-const webSocket = new WebSocket("ws://localhost:8080");
+const webSocket = new WebSocket("ws://"+window.location.hostname+":8080");
 
 // webSocket.addEventListener('open', (event) => {
 //     console.log("SOCKET CLIENT GEOPEND");
