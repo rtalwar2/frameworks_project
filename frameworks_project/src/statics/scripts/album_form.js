@@ -44,7 +44,7 @@ function LaadData() {
 
 function start() {
 
-    document.querySelector("#js_voegToe").addEventListener("click", LaadData)
+    document.querySelector("#js_voegToe").addEventListener("submit", ()=>console.log("data"))
 }
 
 start()

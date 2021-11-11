@@ -10,50 +10,18 @@
 </head>
 <body>
 <h1>Voeg een album toe!</h1>
-<form>
+<form id="js_voegToe">
     <label for="album_titel">titel: </label>
-    <input type="text" id="album_titel">
+    <input required type="text" id="album_titel">
     <label for="album_label">label: </label>
-    <input type="text" id="album_label">
+    <input required type="text" id="album_label">
 <br>
-<!--    "liedjes":  [{-->
-<!--    "titel": "liedje geinsert met album",-->
-<!--    "duur": 36,-->
-<!--    "writer": "raman"-->
-<!--    },-->
-<!--    {-->
-<!--    "titel": "liedje geinsert met album2",-->
-<!--    "duur": 36,-->
-<!--    "writer": "raman2"-->
-<!--    }],-->
-<!--    "artiesten": [{-->
-<!--    "naam":"MUZIKANT geinsert met album",-->
-<!--    "geboortedatum":"2018-01-01",-->
-<!--    "adres":{-->
-<!--    "straat":"geinsert met album",-->
-<!--    "postcode":9999,-->
-<!--    "gemeente": "neverland",-->
-<!--    "land": "ALBUM INSERT LAND"-->
-<!--    },-->
-<!--    "instrument": "Albuuminstrument"-->
-<!--    },-->
-<!--    {-->
-<!--    "naam":"ZANGER geinsert met album",-->
-<!--    "geboortedatum":"2018-01-01",-->
-<!--    "adres":{-->
-<!--    "straat":"geinsert met album",-->
-<!--    "postcode":9999,-->
-<!--    "gemeente": "neverland",-->
-<!--    "land": "ALBUM INSERT LAND"-->
-<!--    },-->
-<!--    "toonhoogte": "Tenor"-->
-<!--    }],-->
     genre:
     <label for="genre_naam">naam: </label>
-    <input type="text" id="genre_naam">
+    <input required type="text" id="genre_naam">
     <label for="genre_origine">origine: </label>
-    <input type="text" id="genre_origine">
-    <button id="js_voegToe" type="button">voeg Toe!</button>
+    <input required type="text" id="genre_origine">
+    <button type="submit">voeg Toe!</button>
 
 </form>
     <p></p>

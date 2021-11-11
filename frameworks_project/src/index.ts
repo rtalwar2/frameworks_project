@@ -76,77 +76,23 @@ createConnection().then(async connection => {
         next();
     });
 
-    // register express routes from defined application routes
-    /*Routes.forEach(route => {
-        (app as any)[route.method](route.route, (req: Request, res: Response, next: Function) => {
-            const result = (new (route.controller as any))[route.action](req, res, next);
-            if (result instanceof Promise) {
-                result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
-
-            } else if (result !== null && result !== undefined) {
-                res.json(result);
-            }
-        });
-    });*/
-
-
     app.use("/liedjes", liedjesRouter)
     app.use("/albums", albumRouter)
     app.use("/genres", genreRouter)
+    app.use(errorHandler)
 
-    app.use(function (req, res, next) {
-        let err = new Error("not found");
-        err.name = "404";
-        next(err);
-    });
+    function errorHandler (err, req, res, next) {
+        if (res.headersSent) {
+            console.log("kaas2")
 
-    app.use(function (err, req, res, next) {
-        res.status(404)
-        res.send(err)
-    })
-    // setup express app here
-    // ...
-
-    // start express server
+            return next(err)
+        }
+        console.log(err)
+        console.log("kaas")
+        res.status(501)
+        res.render(err)
+    }
     app.listen(3000);
-
-    // insert new albums for test
-    //genre:new Genre("superheavymetal","papuanewguinea",[]
-
-/*
-    await connection.manager.save(connection.manager.create(Genre, {
-        naam: "reggae",
-        origine: "Jamaica",
-        albums: []
-    }));
-    let genre_2 = await connection.manager.findOne(Genre, "reggae");
-
-    let muzikant1 = new Muzikant("patat",
-        new Date("2018-03-16"),
-        new Adres("klaastraat", 8500, "Kortrijk", "France"), "blaaspijp")
-    let zanger1 = new Zanger("zanger",
-        new Date("2018-03-06"),
-        new Adres("klaahhstraat", 85500, "Kuurne", "NEWZEELAND"),
-        "Tenor")
-
-    await connection.manager.save(muzikant1);
-    await connection.manager.save(zanger1);
-
-
-    await connection.manager.save(connection.manager.create(Album, {
-        titel: "SKY",
-        label: "KING ARTHUR RECORDS",
-        liedjes: [new Liedje("kaas", 36, "torchelli"), new Liedje("kkas", 36, "torchelli36")],
-        artiesten: [muzikant1, zanger1],
-        genre: genre_2
-    }));
-*/
-
-    /* await connection.manager.save(connection.manager.create(Liedje, {
-         titel: "hello world",
-         duur: 300,
-         writer: "mahalia jackson"
-     }));*/
 
     console.log("Express server has started on port 3000. Open http://193.191.169.108:3000/ to see results");
 

@@ -1,104 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-    <component name="ChangeListManager">
-        <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
-            <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/frameworks_project/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/index.ts" afterDir="false" />
-        </list>
-        <option name="SHOW_DIALOG" value="false" />
-        <option name="HIGHLIGHT_CONFLICTS" value="true" />
-        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-        <option name="LAST_RESOLUTION" value="IGNORE" />
-    </component>
-    <component name="FileTemplateManagerImpl">
-        <option name="RECENT_TEMPLATES">
-            <list>
-                <option value="TypeScript File" />
-                <option value="CSS File" />
-                <option value="HTML File" />
-                <option value="JavaScript File" />
-            </list>
-        </option>
-    </component>
-    <component name="Git.Settings">
-        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    </component>
-    <component name="ProjectId" id="20BiZLm0SR2AxNsW1rsRvzcdwkU" />
-    <component name="ProjectViewState">
-        <option name="hideEmptyMiddlePackages" value="true" />
-        <option name="showLibraryContents" value="true" />
-    </component>
-    <component name="PropertiesComponent">
-        <property name="DatabaseDriversLRU" value="postgresql" />
-        <property name="DefaultHtmlFileTemplate" value="HTML File" />
-        <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-        <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-        <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-        <property name="WebServerToolWindowFactoryState" value="false" />
-        <property name="last_opened_file_path" value="$PROJECT_DIR$/../../labojdbc/JDBCLabo" />
-        <property name="list.type.of.created.stylesheet" value="CSS" />
-        <property name="nodejs_package_manager_path" value="npm" />
-        <property name="ts.external.directory.path" value="D:\industrieel_ingenieur\3de_jaar\frameworks\project\group21\frameworks_project\node_modules\typescript\lib" />
-    </component>
-    <component name="RecentsManager">
-        <key name="MoveFile.RECENT_KEYS">
-            <recent name="D:\industrieel_ingenieur\3de_jaar\frameworks\project\group21\frameworks_project\src\statics" />
-        </key>
-    </component>
-    <component name="RunManager">
-        <configuration name="users" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000/users">
-            <method v="2" />
-        </configuration>
-        <recent_temporary>
-            <list>
-                <item itemvalue="JavaScript Debug.users" />
-            </list>
-        </recent_temporary>
-    </component>
-    <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-    <component name="TaskManager">
-        <task active="true" id="Default" summary="Default task">
-            <changelist id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="" />
-            <created>1635524435669</created>
-            <option name="number" value="Default" />
-            <option name="presentableId" value="Default" />
-            <updated>1635524435669</updated>
-            <workItem from="1635524437873" duration="380000" />
-            <workItem from="1635673037439" duration="29000" />
-            <workItem from="1635858459679" duration="10005000" />
-            <workItem from="1635869162886" duration="10473000" />
-            <workItem from="1635922679352" duration="12067000" />
-            <workItem from="1635942533439" duration="325000" />
-            <workItem from="1636027754979" duration="290000" />
-            <workItem from="1636045571299" duration="1575000" />
-            <workItem from="1636051962962" duration="213000" />
-            <workItem from="1636060076877" duration="532000" />
-            <workItem from="1636215176477" duration="430000" />
-            <workItem from="1636273508696" duration="1472000" />
-            <workItem from="1636278728781" duration="3990000" />
-            <workItem from="1636471620903" duration="14385000" />
-            <workItem from="1636529223624" duration="581000" />
-            <workItem from="1636548201299" duration="103000" />
-            <workItem from="1636556086347" duration="494000" />
-            <workItem from="1636556693720" duration="189000" />
-            <workItem from="1636558027219" duration="185000" />
-            <workItem from="1636558334060" duration="377000" />
-        </task>
-        <servers />
-    </component>
-    <component name="TypeScriptGeneratedFilesManager">
-        <option name="version" value="3" />
-    </component>
-    <component name="Vcs.Log.Tabs.Properties">
-        <option name="TAB_STATES">
-            <map>
-                <entry key="MAIN">
-                    <value>
-                        <State />
-                    </value>
-                </entry>
-            </map>
-        </option>
-        <option name="oldMeFiltersMigrated" value="true" />
-    </component>
+  <component name="ChangeListManager">
+    <list default="true" id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks_project/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks_project/src/index.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="20BiZLm0SR2AxNsW1rsRvzcdwkU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../labojdbc/JDBCLabo" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\industrieel_ingenieur\3de_jaar\frameworks\project\group21\frameworks_project\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\industrieel_ingenieur\3de_jaar\frameworks\project\group21\frameworks_project\src\statics" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="users" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000/users">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.users" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="774d154c-8e4f-4396-8372-05f61072776c" name="Changes" comment="" />
+      <created>1635524435669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635524435669</updated>
+      <workItem from="1635524437873" duration="380000" />
+      <workItem from="1635673037439" duration="29000" />
+      <workItem from="1635858459679" duration="10005000" />
+      <workItem from="1635869162886" duration="10473000" />
+      <workItem from="1635922679352" duration="12067000" />
+      <workItem from="1635942533439" duration="325000" />
+      <workItem from="1636027754979" duration="290000" />
+      <workItem from="1636045571299" duration="1575000" />
+      <workItem from="1636051962962" duration="213000" />
+      <workItem from="1636060076877" duration="532000" />
+      <workItem from="1636215176477" duration="430000" />
+      <workItem from="1636273508696" duration="1472000" />
+      <workItem from="1636278728781" duration="3990000" />
+      <workItem from="1636471620903" duration="14385000" />
+      <workItem from="1636529223624" duration="581000" />
+      <workItem from="1636548201299" duration="103000" />
+      <workItem from="1636556086347" duration="494000" />
+      <workItem from="1636556693720" duration="189000" />
+      <workItem from="1636558027219" duration="185000" />
+      <workItem from="1636558334060" duration="377000" />
+      <workItem from="1636656246214" duration="1144000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
 </project>
